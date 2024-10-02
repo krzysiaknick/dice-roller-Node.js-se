@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - dice-roller-Nodejs-se
+name: Build and deploy Node.js app to Azure Web App - dice-roller-nodejs-SE
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_9055D2E25B8D47B880F08482E906782A }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C6A3D7FEF74E4AE7BAB0DF8139876DB0 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_83699E0D0D8C4C78AC572D373D1421CB }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B7B03E4E067E46D0A75BE1DEFB0158DC }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F4597EAAEEC342B99BBEA8C1827A24C9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0B34E8CD7C9545ACAA07032088CEBC21 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'dice-roller-Nodejs-se'
+          app-name: 'dice-roller-nodejs-SE'
           slot-name: 'Production'
           package: .
           
