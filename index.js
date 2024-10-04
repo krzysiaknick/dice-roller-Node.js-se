@@ -41,6 +41,31 @@ app.get('/2plus2', (request, response) => {
 	response.send('4')
 })
 
+
+
+// generates random dice roll 1-6 and responds in JSON 
+app.get('/d6', (request, response) => {
+    console.log('Calling "/d6" on the Node.js server.');
+
+    const max = 6;
+    const min = 1;
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    let diceRoll = getRandomInt(min, max);
+
+    response.json({ diceRoll: diceRoll });  // Send the number as JSON
+});
+
+
+
+
+
+
+
+
+
+
 // Add x and y which are both passed in on the URL. 
 app.get('/add-two-integers', (request, response) => {
 	console.log('Calling "/add-two-integers" on the Node.js server.')
